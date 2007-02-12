@@ -5,7 +5,7 @@
 %define		_pearname	Validate_ISPN
 
 Summary:	%{_pearname} - validation class for ISPN (International Standard Product Numbers)
-Summary(pl.UTF-8):   %{_pearname} - klasa sprawdzania poprawności ISPN (Internation Standard Product Numbers)
+Summary(pl.UTF-8):	%{_pearname} - klasa sprawdzania poprawności ISPN (Internation Standard Product Numbers)
 Name:		php-pear-%{_pearname}
 Version:	0.6.0
 Release:	1

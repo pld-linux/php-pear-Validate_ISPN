@@ -1,20 +1,17 @@
 %include	/usr/lib/rpm/macros.php
-%define		_class		Validate
-%define		_subclass	ISPN
 %define		_status		alpha
 %define		_pearname	Validate_ISPN
-
 Summary:	%{_pearname} - validation class for ISPN (International Standard Product Numbers)
 Summary(pl.UTF-8):	%{_pearname} - klasa sprawdzania poprawności ISPN (Internation Standard Product Numbers)
 Name:		php-pear-%{_pearname}
 Version:	0.6.1
-Release:	1
+Release:	2
 License:	New BSD
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	e8393a93b0e30a7c44959f0dc08e5533
 URL:		http://pear.php.net/package/Validate_ISPN/
-BuildRequires:	php-pear-PEAR
+BuildRequires:	php-pear-PEAR >= 1:1.4.0-0.b1
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-common >= 3:4.1.0
@@ -59,8 +56,8 @@ Summary:	Tests for PEAR::%{_pearname}
 Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{version}-%{release}
-AutoReq:	no
 AutoProv:	no
+AutoReq:	no
 
 %description tests
 Tests for PEAR::%{_pearname}.

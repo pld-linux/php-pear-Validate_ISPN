@@ -18,6 +18,7 @@ Requires:	php-common >= 3:4.1.0
 Requires:	php-pear
 Requires:	php-pear-PEAR-core >= 1:1.4.0
 Requires:	php-pear-Validate >= 0.5.0
+Obsoletes:	php-pear-Validate_ISPN-tests
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -51,20 +52,6 @@ Standard Product Numbers) takich jak:
 
 Ta klasa ma w PEAR status: %{_status}.
 
-%package tests
-Summary:	Tests for PEAR::%{_pearname}
-Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
-Group:		Development/Languages/PHP
-Requires:	%{name} = %{version}-%{release}
-AutoProv:	no
-AutoReq:	no
-
-%description tests
-Tests for PEAR::%{_pearname}.
-
-%description tests -l pl.UTF-8
-Testy dla PEAR::%{_pearname}.
-
 %prep
 %pear_package_setup
 
@@ -81,7 +68,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc install.log docs/%{_pearname}/LICENSE
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/Validate/ISPN.php
-
-%files tests
-%defattr(644,root,root,755)
-%{php_pear_dir}/tests/*

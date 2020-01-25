@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.php
 %define		_status		alpha
 %define		_pearname	Validate_ISPN
 Summary:	%{_pearname} - validation class for ISPN (International Standard Product Numbers)
